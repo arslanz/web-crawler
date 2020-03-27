@@ -20,5 +20,17 @@ Before being able to compile, test and run you will need to have/install:
 ## Running the code
 `mvn exec:java -Dexec.mainClass=org.codingexercise.buildit.webcrawler.EntryPoint`
 
-# Code design and approach
-The design has been separated into three main components; crawler, fetcher and consumer. The crawler is responsible for visiting the various pages using the fetcher and then sending the result to the consumer.
+## Code design and approach
+The design has been separated into three main components; Crawler, Fetcher and Consumer.
+
+![alt text](https://github.com/arslanz/web-crawler/blob/master/design/WebCrawlerDesign.png "Web Crawler Design")
+
+### Crawler
+The Crawler is responsible for visiting the various pages using the Fetcher and then sending the result to the Consumer.
+There are two main implementations of the Crawler; DepthFirstCrawler and BreadthFirstCrawler. As the name implies, they take two different approaches to searching for links within pages. In interesting observation is that, as you can see from the footer of the [sample output](https://github.com/arslanz/web-crawler/tree/master/sample), the BreadFirstCrawler is slightly faster (7.8secs vs 8,5secs).
+
+### Fetcher
+The Fetcher is responsible for taking an URL and organising all the URL's on the page into internal, external and static content links. It does this using various other interfaces and classes; the Checker and Sanitizer classes. The results are returned to the Crawler.
+
+### Consumer
+Whenever called by the Crawler, the consumer recieves a PageResult object that contains the three different categories of information to display. Currently, there is one interface implementation named ConsolePrinter, which prints directly to the console. However, the design allows any other kind of implementation so that the results can be consumed by various interfaces or storage types.
