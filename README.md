@@ -20,7 +20,14 @@ Before being able to compile, test and run you will need to have/install:
 ## Running the code
 `mvn exec:java -Dexec.mainClass=org.codingexercise.buildit.webcrawler.EntryPoint`
 
-Once initialized, the code will prompt the user for a URL. Please note that a fully formed URL (with the protocol) must be specified e.g. https://wiprodigital.com
+Once initialized, the code will prompt the user for a URL. Please note that a fully formed URL (with the protocol) must be specified e.g.
+```
+**************************************************
+Welcome to the BuildIt Web Crawler!
+Please enter the starting URL (or 'exit' to end):
+https://wiprodigital.com 
+-----------------------------------------------
+```
 
 ## Code design and approach
 The design has been separated into three main components; Crawler, Fetcher and Consumer.
