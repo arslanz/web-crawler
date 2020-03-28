@@ -52,7 +52,7 @@ The SameDomainChecker ignores the authority (.com, .net, .gov) as well as the ww
 ### Consumer
 Whenever called by the Crawler, the consumer recieves a PageResult object that contains the three different categories of information to display: internal URL's, external URL's and static content URL's. Currently, there is one interface implementation named ConsolePrinter, which prints directly to the console. However, the design allows any other kind of implementation so that the results can be consumed by various interfaces or storage types.
 
-## Enhancements & Features
+## Future enhancements & features
 * Expand the unit test coverage to cover all the classes.
 * Include integration tests to perform automated end-to-end testing.
 * Include performance tests to compare and contrast the different Crawler implementations.
