@@ -50,7 +50,10 @@ https://account.google.com/index.html
 The SameDomainChecker ignores the authority (.com, .net, .gov) as well as the www portion of the URL.
 
 ### Consumer
-Whenever called by the Crawler, the consumer recieves a PageResult object that contains the three different categories of information to display. Currently, there is one interface implementation named ConsolePrinter, which prints directly to the console. However, the design allows any other kind of implementation so that the results can be consumed by various interfaces or storage types.
+Whenever called by the Crawler, the consumer recieves a PageResult object that contains the three different categories of information to display: internal URL's, external URL's and static content URL's. Currently, there is one interface implementation named ConsolePrinter, which prints directly to the console. However, the design allows any other kind of implementation so that the results can be consumed by various interfaces or storage types.
 
 ## Enhancements & Features
-With more time I would have liked to expand the unit test coverage to cover all the classes. I would have liked to have integration tests in place so that all the classes can be tested together. With the inclusion of the different implementations of the Crawler interface, I would also like to write performance tests so that the different implementations can be compared and contrasted. On this note, I would like to experiment with an additional Crawler implementation that uses threads to perform the Fetcher and Consumer functionality in parallel. This would likely be the fastest implementation.
+* Expand the unit test coverage to cover all the classes.
+* Include integration tests to perform automated end-to-end testing.
+* Include performance tests to compare and contrast the different Crawler implementations.
+* Multi-threaded Crawler implementations.
