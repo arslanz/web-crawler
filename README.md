@@ -57,3 +57,4 @@ Whenever called by the Crawler, the consumer recieves a PageResult object that c
 * Include integration tests to perform automated end-to-end testing.
 * Include performance tests to compare and contrast the different Crawler implementations.
 * Multi-threaded Crawler implementations.
+* Extend the project to become a REST based API that visualizes the results as an expanding map in real-time with representations that the user can interact with.
