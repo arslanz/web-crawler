@@ -73,9 +73,11 @@ public class Initializer {
     }
 
     private String captureUserEnteredUrl() {
-        Scanner input = new Scanner(System.in);
+        Scanner stdin = new Scanner(System.in);
         System.out.println("Please enter the starting URL (or 'exit' to end):");
-        return input.nextLine().trim();
+        final String input = stdin.nextLine().trim();
+        stdin.close();
+        return input;
     }
 
     private boolean isValidUrl(final String userInput) {
