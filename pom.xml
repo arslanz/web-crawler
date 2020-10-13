@@ -14,7 +14,7 @@
         <jsoup.version>1.13.1</jsoup.version>
         <projectlombok.version>1.18.4</projectlombok.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
